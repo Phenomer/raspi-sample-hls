@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HLSのサンプル</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="/static/video.js"></script>
+    <link rel="stylesheet" href="/static/main.css" type="text/css">
+  </head>
+
+  <body id="mainBox">
+    <h1>HLSのサンプル</h1>
+    <div id="videoBox">
+      <video id="sampleVideo" controls style="max-width: 95vw; max-height: 80vh;"></video>
+      <div>
+	<p>縦: <input type="range" min="-100" max="100"
+		      value="0" id="camera_vertical"></p>
+	<p>横: <input type="range" min="-100" max="100"
+		      value="0" id="camera_horizontal"></p>
+      </div>
+    </div>
+  </body>
+</html>
