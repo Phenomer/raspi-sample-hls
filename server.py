@@ -4,6 +4,9 @@ import json
 async def index(request):
     return web.FileResponse('index.html')
 
+async def dash(request):
+    return web.FileResponse('dash.html')
+
 async def wscontroller(request):
     ws = web.WebSocketResponse()
     await ws.prepare(request)
@@ -20,6 +23,7 @@ async def wscontroller(request):
 
 app = web.Application()
 app.add_routes([web.get('/', index),
+                web.get('/dash', dash),
                 web.get('/controller', wscontroller),
                 web.static('/static', 'static'),
                 web.static('/stream', 'stream'),

@@ -1,8 +1,8 @@
 function initVideoStream() {
-    var video = document.getElementById('sampleVideo');
-    var videoSrc = '/stream/out.m3u8';
+    let video = document.querySelector('#sampleVideo');
+    let videoSrc = '/stream/out.m3u8';
     if (Hls.isSupported()) {
-	var hls = new Hls();
+	let hls = new Hls();
 	hls.loadSource(videoSrc);
 	hls.attachMedia(video);
     }
@@ -12,5 +12,5 @@ function initVideoStream() {
 }
 
 window.onload = ()=>{
-    initVideoStream();    
+    initVideoStream();
 };
